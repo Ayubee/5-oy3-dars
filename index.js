@@ -50,3 +50,29 @@
 // 28 drop Obyekt tashlanganda
 // 29 copy nusxa olganda
 // 30 paste nusxa qoyilganda
+
+const para1 = document.querySelector("#para1");
+const para2 = document.querySelector("#para2");
+const Btn = document.querySelector("#changeTextBtn");
+
+Btn.addEventListener("click", () => {
+  para1.textContent = "birinchi paragraf ozgardi";
+  para2.textContent = "ikkinchi paragraf ozgardi";
+});
+
+const img = document.getElementById("myImage");
+const Btn1 = document.getElementById("changeImageBtn");
+
+Btn1.addEventListener("click", () => {
+  img.src = "./img/dathNote.jpg";
+});
+
+const body = document.body;
+const btn2 = document.getElementById("addElementBtn");
+const div = document.createElement("div");
+body.appendChild(div);
+btn2.addEventListener("click", () => {
+  const text = document.createElement("p");
+  div.appendChild(text);
+  text.textContent = "dathNote";
+});
